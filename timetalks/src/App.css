@@ -1,0 +1,144 @@
+:root {
+  --primary: #4A90E2;
+  --secondary: #50E3C2;
+  --accent: #F5A623;
+  --app-bg: #FAFBFD;
+  --sidebar-bg: #F5F7FB;
+  --sidebar-active: #E2F2EE;
+  --sidebar-accent: #E8F5FB;
+  --badge-bg: #F5A62322;
+  --chat-bg: #F7FAFE;
+  --chat-bubble-user: #50E3C2;
+  --chat-bubble-bot: #4A90E2;
+  --border-color: #E6E6E6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background: var(--app-bg);
+  color: #222;
+}
+
+.main-app {
+  min-height: 100vh;
+  background: var(--app-bg);
+}
+
+.navbar {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 2px 9px #4a90e23b;
+  padding: 0.85em 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 22;
+}
+
+.logo {
+  font-size: 1.28em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  letter-spacing: .01em;
+}
+
+.logo-symbol {
+  font-size: 1.23em;
+  margin-right: .4em;
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.99em;
+  padding: 3px 11px;
+  margin: 0 3px;
+  background: var(--badge-bg);
+  border-radius: 16px;
+  border: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.main-content {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.sidebar-char {
+  cursor: pointer;
+  transition: background 0.18s, border 0.13s;
+  background: transparent;
+  border: 2px solid transparent;
+}
+
+.sidebar-char.selected {
+  background: var(--sidebar-active);
+  border: 2px solid var(--secondary);
+  box-shadow: 0 0 8px #50e3c22a;
+}
+
+.sidebar-char:hover:not(.selected) {
+  background: var(--sidebar-accent);
+}
+
+.chat-area {
+  min-height: 500px;
+  background: var(--chat-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  min-height: 330px;
+  padding-bottom: 19px;
+}
+
+.chat-bubble {
+  position: relative;
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 1px;
+  box-shadow: 0 2px 6px #0001;
+}
+
+.chat-input {
+  border-top: 1px solid var(--border-color);
+  background: #fff;
+}
+
+input[type="text"] {
+  font-family: inherit;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.btn:hover {
+  background-color: #3579be;
+}
+
+.btn:active {
+  filter: brightness(0.94);
+}
+
+.visitor-popup {
+  animation: fadePopUp .5s;
+}
+
+@keyframes fadePopUp {
+  from { opacity: 0; transform: translateY(-22px);}
+  to { opacity: 1; transform: translateY(0);}
+}

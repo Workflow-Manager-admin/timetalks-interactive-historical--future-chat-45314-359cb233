@@ -1,0 +1,4 @@
+{
+    "command": "PORT=<port> BROWSER=none npm start",
+    "working_directory": "/home/kavia/workspace/code-generation/timetalks-interactive-historical--future-chat-45314-359cb233/timetalks"
+}
